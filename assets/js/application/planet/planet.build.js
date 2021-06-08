@@ -1,5 +1,7 @@
 import * as THREE from '../../lib/three.module.js'
 import WHITE from './white/planet.white.build.js'
+import RED from './red/planet.red.build.js'
+import BLUE from './blue/planet.blue.build.js'
 
 export default class{
     constructor(app){
@@ -20,7 +22,9 @@ export default class{
         }
 
         this.modules = {
-            white: WHITE
+            white: WHITE,
+            red: RED,
+            blue: BLUE
         }
 
         this.initGroup()
@@ -100,7 +104,7 @@ export default class{
     animateObject(){
         for(let i in this.comp){
             if(!this.comp[i] || !this.comp[i].animate) continue
-            this.comp[i].animate({angle: this.angle})
+            this.comp[i].animate(this)
         }
     }
 

@@ -1,5 +1,5 @@
 import * as THREE from '../../../lib/three.module.js'
-import PARAM from './planet.white.param.js'
+import PARAM from './planet.blue.param.js'
 import {PLANET} from '../planet.class.js'
 
 export default class extends PLANET{
